@@ -30,8 +30,8 @@ const Footer = () => {
                         <div className="text-sm space-y-2">
                             <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
                             <div className="flex items-center gap-2 pt-4">
-                                <input className="border border-gray-500/30 placeholder-gray-500 focus:ring-2 ring-indigo-600 outline-none w-full max-w-64 h-9 rounded px-2" type="email" placeholder="Enter your email" />
-                                <button className="bg-green-400 w-24 h-9 text-white rounded">Subscribe</button>
+                                <input className="border border-gray-500/30 placeholder-gray-500 focus:ring-2 ring-orange-600 outline-none w-full max-w-64 py-1 rounded px-2" type="email" placeholder="Enter your email" />
+                                <button className="bg-green-400 px-6 py-2 text-white rounded">Subscribe</button>
                             </div>
                         </div>
                     </div>

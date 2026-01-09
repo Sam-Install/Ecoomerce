@@ -68,7 +68,7 @@ const Navbar = () => {
       </div>
 
 
-      <div className={`absolute top-0 right-0 bottom-0 transition-all bg-white z-50 ${visible ? 'w-full' : 'w-0'}`}>
+      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden transition-all bg-white z-50 ${visible ? 'w-full' : 'w-0'}`}>
         <div className='flex flex-col text-gray-600'>
           <div className='flex items-center gap-2 p-3'>
             <FaArrowRight onClick={() => setVisible(false)} className='text-2xl rotate-180' /> 
