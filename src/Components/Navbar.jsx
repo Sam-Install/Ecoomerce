@@ -16,8 +16,8 @@ const Navbar = () => {
     <div className='flex items-center justify-between py-5 font-medium'>
 
       
-      <h1 className='text-2xl text-orange-600'>
-        Sams<span className='text-2xl text-green-600'>Store</span>
+      <h1 className='prata-regular text-2xl text-orange-600'>
+        Ghetto<span className='text-2xl text-green-600'>Store</span>
       </h1>
       
     

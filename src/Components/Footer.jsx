@@ -9,8 +9,8 @@ const Footer = () => {
           
           
           <div className="md:max-w-md">
-            <h1 className="text-2xl text-orange-400">
-              Sams<span className="text-2xl text-green-400">Store</span>
+            <h1 className="prata-regular text-2xl text-orange-400">
+              Ghetto<span className="text-2xl text-green-400">Store</span>
             </h1>
             <p className="mt-6 text-sm text-gray-700">
               Located at the heart of the coastal city and delivering worldwide.
