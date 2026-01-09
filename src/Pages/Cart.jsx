@@ -93,6 +93,7 @@ const Cart = () => {
                 Proceed to Checkout
               </button>
             </Link>
+         <Link to='/collection'><p className="text-black mt-2">Back To collection</p></Link>  
           </div>
         </>
       )}
