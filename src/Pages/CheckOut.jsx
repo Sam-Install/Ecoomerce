@@ -182,7 +182,7 @@ const CheckOut = () => {
           
           <button
             onClick={handleSubmit}
-            className="bg-green-400 text-white px-6 py-3 rounded hover:bg-blue-700 transition w-full"
+            className="bg-green-400 text-white px-6 py-3 rounded hover:bg-gray-600 transition w-full"
           >
             Place Order
           </button>

@@ -1,51 +1,72 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div className='my-20'>
-
-
-           <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
-            <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
-                <div className="md:max-w-96">
-                   <h1 className='text-2xl text-orange-400'>Sams<span className='text-2xl text-green-400'>Store</span></h1>
-                    <p className="mt-6 text-sm">
-
-                        Located at the heart of the coastal city and delivering worldwide we are a fashion shopping  center established to ensure you get every quality of your money
-                       
-                       </p>
-                </div>
-                <div className="flex-1 flex items-start md:justify-end gap-20">
-                    <div>
-                        <h2 className="font-semibold mb-5 text-gray-800">Company</h2>
-                        <ul className="text-sm space-y-2">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About us</a></li>
-                            <li><a href="/contact">Contact us</a></li>
-                            <li><a href="/careers">Career</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="font-semibold text-gray-800 mb-5">Subscribe to our newsletter</h2>
-                        <div className="text-sm space-y-2">
-                            <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
-                            <div className="flex items-center gap-2 pt-4">
-                                <input className="border border-gray-500/30 placeholder-gray-500 focus:ring-2 ring-orange-600 outline-none w-full  py-1 rounded px-6" type="email" placeholder="Enter your email" />
-                                <button className="bg-green-400 px-6 py-2 text-white rounded">Subscribe</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p className="pt-4 text-center text-xs md:text-sm pb-5">
-                Copyright 2026 ©  All Right Reserved.
+    <div className="my-20 bg-gray-50">
+      <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
+        
+        <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-300 pb-6">
+          
+          
+          <div className="md:max-w-md">
+            <h1 className="text-2xl text-orange-400">
+              Sams<span className="text-2xl text-green-400">Store</span>
+            </h1>
+            <p className="mt-6 text-sm text-gray-700">
+              Located at the heart of the coastal city and delivering worldwide.
+              We are a fashion shopping center established to ensure you get
+              the highest quality for your money.
             </p>
-        </footer>
+          </div>
 
+          
+          <div className="flex-1 flex flex-col md:flex-row gap-10 md:justify-end">
+            
+            
+            <div>
+              <h2 className="font-semibold mb-5 text-gray-800">
+                Company
+              </h2>
+              <ul className="text-sm space-y-2">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="/careers">Career</a></li>
+              </ul>
+            </div>
 
+            
+            <div className="flex-1">
+              <h2 className="font-semibold text-gray-800 mb-5">
+                Subscribe to our newsletter
+              </h2>
 
+              <p className="text-sm text-gray-700 mb-3">
+                The latest news, articles, and resources sent to your inbox weekly.
+              </p>
+
+              
+              <form className="flex flex-col sm:flex-row gap-2 items-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full sm:flex-1 border border-gray-400 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+                <button className="bg-green-400 text-white px-6 py-2 rounded w-full sm:w-auto">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        
+        <p className="pt-4 text-center text-xs md:text-sm pb-5 text-gray-600">
+          Copyright 2026 © All Rights Reserved.
+        </p>
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
