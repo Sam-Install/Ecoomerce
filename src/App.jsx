@@ -9,6 +9,7 @@ import Cart from './Pages/Cart'
 import ProductItem from './Pages/ProductItem'
 import Footer from './Components/Footer'
 import Careers from './Pages/Careers'
+import CheckOut from './Pages/CheckOut'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
 <Route path='/cart' element={<Cart/>} />
 <Route path='/product/:id' element={<ProductItem/>} />
 <Route path='/careers' element={<Careers/>} />
+<Route path='/checkout' element={<CheckOut/>} />
 
 
     </Routes>

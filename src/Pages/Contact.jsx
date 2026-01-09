@@ -26,7 +26,7 @@ const Contact = () => {
             <p className='text-center text-gray-500 mt-10'>Mail:SamsStore@gmail.com</p>
 
             <h2 className='text-center mt-10 text-2xl font-bold text-gray-500'>Careers at SamsStore</h2>
-       <Link className='flex justify-center'><button className='bg-green-400 text-sm p-2 rounded px-6 py-2 mt-5 flex'>See Open Positions</button></Link>   
+       <Link to='/careers' className='flex justify-center'><button className='bg-green-400 text-sm p-2 rounded px-6 py-2 mt-5 flex'>See Open Positions</button></Link>   
 
 
 
