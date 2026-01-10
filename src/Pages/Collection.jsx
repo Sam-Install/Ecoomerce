@@ -4,6 +4,7 @@ import f1 from '../assets/f1.jpg';
 import d2 from '../assets/denim.jpg';
 import dre from '../assets/dress.jpg';
 import mas from '../assets/massagegun.jpeg';
+import bo from '../assets/babyoverall.jpg'
 
 const productsData = [
   {
@@ -42,6 +43,17 @@ const productsData = [
     description: "High-power massage gun for muscle relief and recovery.",
     sizes: [],
   },
+
+
+  {
+    id:5,
+    title:"Baby Overall",
+    price:"ksh 800",
+    img:bo,
+    category:"children",
+    description:"This is the ultimate dress choice for your baby , unisex and suitable for all weather",
+    sizes:["S","M", "L"],
+  }
 ];
 
 const categories = [
@@ -85,7 +97,7 @@ const Collection = () => {
         ))}
       </div>
 
-      {/* Product Grid */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredProducts.map((product) => (
           <Link
