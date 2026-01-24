@@ -34,11 +34,12 @@ const ProductItem = () => {
     <div className="max-w-4xl mx-auto my-10 p-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
     
       <div>
-        <img
-          src={product.img}
-          alt={product.title}
-          className="w-full h-96 object-cover rounded-lg"
-        />
+      <img
+  src={`http://127.0.0.1:8000/${product.image}`}
+  alt={product.title}
+  className="w-full h-96 object-cover rounded-lg"
+/>
+
       </div>
 
       

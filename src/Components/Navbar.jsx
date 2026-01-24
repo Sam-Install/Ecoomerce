@@ -33,19 +33,21 @@ const Navbar = () => {
         </NavLink>
         <NavLink to='/contact' className='flex flex-col items-center gap-1'>
           <p>Contact</p>
-        </NavLink>
+         </NavLink>
+
+          
       </ul>
 
       
       <div className='flex items-center gap-6'>
 
-        <CiSearch className='text-2xl cursor-pointer' />
+  
 
         <div className='group relative'>
           <CiUser className='text-2xl cursor-pointer' />
           <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
             <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-black rounded'>
-              <p className='cursor-pointer hover:text-green-600'>My Profile</p>
+            <Link to='/user/loginuser'><p className='cursor-pointer hover:text-green-600'>My Profile</p></Link>  
               <p className='cursor-pointer hover:text-green-600'>Orders</p>
               <p className='cursor-pointer hover:text-green-600'>LogOut</p>
             </div>
@@ -64,6 +66,8 @@ const Navbar = () => {
         </Link>
 
         <TiThMenu onClick={() => setVisible(true)} className='text-2xl sm:hidden' />
+          
+      <Link to='/admin/login'><button className='bg-red-400 text-sm rounded px-6 py-1'>Admin</button></Link>
 
       </div>
 
@@ -79,6 +83,7 @@ const Navbar = () => {
           <NavLink to='/collection' onClick={() => setVisible(false)} className='py-2 pl-6 border'>Collection</NavLink>
           <NavLink to='/about' onClick={() => setVisible(false)} className='py-2 pl-6 border'>About</NavLink>
           <NavLink to='/contact' onClick={() => setVisible(false)} className='py-2 pl-6 border'>Contact</NavLink>
+          <NavLink to='/admin/login' onClick={() => setVisible(false)} className='py-2 pl-6 border'>Admin</NavLink>
         </div>
       </div>
 

@@ -1,75 +1,60 @@
-import React from "react";
-import f1 from "../assets/f1.jpg";
-import j1 from "../assets/jeans.jpeg";
-import sh1 from "../assets/shirt1.jpg";
-import p1 from "../assets/palazo.png";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const LatestProducts = () => {
-  const cole = [
-    {
-      id: 0,
-      img: f1,
-      title: "Floral beach shirt",
-      price: "Ksh 1000",
-      description: "A comfortable floral beach shirt — perfect for summer days.",
-      sizes: ["S", "M", "L", "XL"],
-    },
-    {
-      id: 1,
-      img: j1,
-      title: "Full jeans",
-      price: "Ksh 1500",
-      description: "Classic full jeans that match any outfit.",
-      sizes: ["30", "32", "34", "36"],
-    },
-    {
-      id: 2,
-      img: sh1,
-      title: "Puma shirt",
-      price: "Ksh 1000",
-      description: "Sporty and breathable Puma shirt for everyday wear.",
-      sizes: ["S", "M", "L", "XL"],
-    },
-    {
-      id: 3,
-      img: p1,
-      title: "Palazo pants",
-      price: "Ksh 800",
-      description: "Lightweight palazo pants — comfortable & stylish.",
-      sizes: ["S", "M", "L", "XL"],
-    },
-  ];
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/latest")
+      .then(res => {
+        if (!res.ok) throw new Error("API failed");
+        return res.json();
+      })
+      .then(data => setProducts(data))
+      .catch(err => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p className="text-center text-lg mt-6">Loading…</p>;
+  if (error) return <p className="text-center text-red-500 mt-6">{error}</p>;
 
   return (
-    <div className="my-10">
-      <h1 className="text-2xl text-orange-500 text-center mt-2">
-        Latest <span className="text-2xl text-green-500">Products</span>
-      </h1>
-      <p className="prata-regular text-center mt-2">
-        We constantly have new products & clothes on our store so check out
-        regularly
-      </p>
+    <div className="my-12 px-4 mx-auto max-w-7xl">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <h1 className="prata-regular text-4xl  text-orange-500">
+          Latest Products
+        </h1>
+        <p className="text-gray-700 mt-2">
+          We stock latest products & clothes often — check with us regularly.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 gap-4">
-        {cole.map((item) => (
-          <Link
-            key={item.id}
-            to={`/product/${item.id}`}
-            state={{ product: item }}
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map(p => (
+          <div
+            key={p.id}
+            className="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
           >
-            <div className="flex flex-col items-center bg-white shadow-md rounded-lg overflow-hidden">
+            {p.image && (
               <img
-                src={item.img}
-                alt={item.title}
-                className="w-full h-64 object-cover"
+                src={`http://127.0.0.1:8000/${p.image}`}
+                alt={p.title}
+                className="w-100 h-50 object-cover"
               />
-              <div className="p-4 text-center">
-                <h1 className="font-semibold">{item.title}</h1>
-                <p className="text-gray-700">{item.price}</p>
-              </div>
+            )}
+            <div className="p-4">
+              <h3 className="font-semibold text-lg text-gray-800">
+                {p.title}
+              </h3>
+              <p className="mt-1 text-gray-700">Ksh {p.price}</p>
+              <p className="mt-1 text-sm text-gray-500">
+                {Number(p.stock) > 0 ? `${Number(p.stock)} in stock` : 'Out of stock' }
+              </p>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

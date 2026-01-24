@@ -10,7 +10,7 @@ const CheckOut = () => {
     0
   );
 
-  const [paymentMethod, setPaymentMethod] = useState("cod"); // default = Cash on Delivery
+  const [paymentMethod, setPaymentMethod] = useState("cod"); 
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -27,7 +27,7 @@ const CheckOut = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Order submitted! Thank you for shopping with us.");
-    // Here you can send to backend or clear cart etc.
+    
   };
 
   return (
